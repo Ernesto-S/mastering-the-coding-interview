@@ -3,5 +3,6 @@
 ## Getting More Interviews
 
 - [ ] Add BIG WINS in LINKEDIN descriptions 
-- [ ] Update Portfolio website 
+- [x] Update Portfolio website 
+- [ ] Make rubiks cube machine learning project
 - [ ] 

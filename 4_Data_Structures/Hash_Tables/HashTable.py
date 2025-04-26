@@ -42,8 +42,21 @@ class HashTable:
                     return True
         return False
     
+    def keys(self):
+        keys = []
+        for bucket in self.table:
+            if bucket is not None:
+                for k, v in bucket:
+                    keys.append(k)
+        return keys
+    
 myHashTable = HashTable(1)
 myHashTable.insert('grapes', 10000)
 myHashTable.insert('apples', 23)
+myHashTable.insert('oranges', 2)
 print(myHashTable.table) 
 print(myHashTable.search('apples'))  # Output: one
+
+print(myHashTable.keys())  # Output: ['grapes', 'apples
+myHashTable.delete('apples')
+print(myHashTable.keys())  # Output: ['grapes', 'oranges']

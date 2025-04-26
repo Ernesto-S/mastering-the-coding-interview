@@ -1,0 +1,47 @@
+# Question 1
+
+# Create a class which takes in a 'window_size' and has a function called 'next'.
+# The function is called by a client and inputs a value which can be considered as a 
+# data stream. The function next returns the moving average for each call.
+
+class MovingAverage():
+
+    def __init__(self, window_size: int = 3) -> None:
+        self.window_size = window_size
+        self.list = []
+
+    def next(self, value: int):
+        self.list.append(value)
+        # sum(list)
+        # list[-self.window_size:]
+        total_values = 0
+        if len(self.list) < self.window_size:
+            total_values = len(self.list)
+        if len(self.list) >= self.window_size:  
+            total_values = self.window_size
+        average = sum(self.list[-self.window_size:])/total_values
+        return average
+
+
+# Client calls
+moving_avg = MovingAverage(window_size=3)
+print(moving_avg.next(2)) # returns 2: (2/1)
+print(moving_avg.next(10)) # returns 6: (2 + 10) / 2
+print(moving_avg.next(3)) # returns 5: (2 + 10 + 3) / 3
+print(moving_avg.next(5)) # returns 6: (10 + 3 + 5) / 3
+
+
+# Question 2
+
+# Assembly Data / Genealogy  
+
+# Definition
+# AIRCRAFT | AIRFRAME  |
+#          | AVIONICS  | MOTHERBOARD 
+#                      | SSD
+
+# Q2)
+# Provided this example relationship structure, what is an appropriate data structure you would use to define it?
+
+
+# Tree data structure would be appropriate

@@ -73,6 +73,22 @@ class myLinkedList:
         leader["next"] = unwantedNode["next"]
         self.length -= 1
         return True
+    
+    def reverse(self):
+        if self.head is None:
+            return None
+        
+        first = self.head
+        self.tail = self.head
+        second = first["next"]
+        while second is not None:
+            temp = second["next"]
+            second["next"] = first
+            first = second
+            second = temp
+        
+        self.head["next"] = None
+        self.head = first
         
 
 LL = myLinkedList(10)
@@ -100,3 +116,10 @@ print("\nDeleted index 2")
 LL.printList()
 
 
+LL.reverse()
+print("\nReversed")
+LL.printList()
+
+LL.reverse()
+print("\nReversed again")
+LL.printList()

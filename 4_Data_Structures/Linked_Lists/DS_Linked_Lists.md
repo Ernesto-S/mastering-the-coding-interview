@@ -23,7 +23,9 @@
 
 A pointer is a reference to another place in memory. 
 
-let obj1 = { a: Trure}
+let obj1 = { a: True}
 let obj2 = obj1
 
 In this example obj2 is pointing to obj1
+
+Linked list are low level data structures that are fundamental to data science. The lookup are slow and more memory is needed. But there is fast insertion and fast deletion. 

@@ -40,7 +40,7 @@ class myLinkedList:
             currentNode = currentNode["next"]
 
     def insert(self, index, value):
-        # check parammeters
+        # check parameters
         if index >= self.length:
             return self.append(value)
         
@@ -114,7 +114,6 @@ LL.printList()
 LL.delete(2)
 print("\nDeleted index 2")
 LL.printList()
-
 
 LL.reverse()
 print("\nReversed")

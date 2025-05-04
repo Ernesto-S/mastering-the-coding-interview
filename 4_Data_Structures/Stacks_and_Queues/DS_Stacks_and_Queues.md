@@ -13,6 +13,10 @@ LIFO Last in First Out
 |  push  | O(1) |
 |  peek  | O(1) |
 
+Example of use:
+- Browser history
+- Undo/redo option
+
 ## Queue
 
 FIFO First in First out
@@ -24,4 +28,8 @@ FIFO First in First out
 | dequeue | O(1) |
 |  peek   | O(1) |
 
-Typically used in cases like printers, lyft ride
+Example of use:
+- line to a roller coaster
+- anything with a wait list
+- Ride share apps
+- Using printers 

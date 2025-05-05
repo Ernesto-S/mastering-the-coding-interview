@@ -33,3 +33,18 @@ Example of use:
 - anything with a wait list
 - Ride share apps
 - Using printers 
+
+## Stacks and Queues in JavaScript Programming Language. 
+
+JavaScript is a single threaded language that can be NON blocking. It only has a
+"Call Stack" and a "Memory Heap"
+
+Memory Heap is the allowable space of memory. Where variables are stored
+
+Call stack is a Queue that follows first in first out sequence for the program.
+
+The website "Stack Overflow" comes from the Call Stack exceeding the space in the 
+Call Stack. One way to create a Stack Overflow event is recursion. Where a function
+calls itself within the 
+
+Javascript is synchronous programming language. In order to not block the single thread language it can be made to be Asynchronous by creating an event loop that can run the steps in the queues. If there is ever a step that takes longer it will start it, but skip to the next line in order to output the value. 

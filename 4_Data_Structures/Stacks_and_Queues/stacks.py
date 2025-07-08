@@ -26,20 +26,57 @@ class Stack:
     def peek(self):
         if self.top is None:
             return None
-        return self.top.value()        
+        return self.top        
 
     def push(self, value):
-        
-
-
+        # add a node to the top of stack
+        newNode = Node(value)
+        if self.length == 0:
+            self.top = newNode
+            self.bottom = newNode
+        else:
+            hold_top = self.top
+            self.top = newNode
+            self.bottom = hold_top
+        self.length += 1
+        return self
+    
     def pop(self):
+        # lets you remove from top of stack
+        if self.length == 0:
+            return None
+        if self.length == 1:
+            self.top = None
+            self.bottom = None
+        else:
+            hold_top = self.top
+            self.top = self.bottom
+            self.bottom = hold_top.next
+        self.length -= 1
+        return hold_top.value
 
-
-    def empty(self):
+    def is_empty(self):
+        # checks if stack is empty
+        if self.length == 0:
+            return True
+        return False
+    
 
 myStack = Stack()
+print(myStack.is_empty())  # Should print True
 myStack.push("Discord")
+print(myStack.peek().value)      # Should print "Discord"
 myStack.push("Udemy")
+print(myStack.peek().value) 
+myStack.pop()
+print(myStack.peek().value) 
+myStack.push("Youtube")
+print(myStack.peek().value) 
 myStack.push("Google")
+myStack.peek()
+print(myStack.pop())
+print(myStack.peek().value)  # Should print "Youtube"
+print(myStack.is_empty())    # Should print False
+
 
     

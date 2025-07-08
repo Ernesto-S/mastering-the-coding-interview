@@ -4,12 +4,15 @@
 def is_unique(any_string):
     unique = None
     index = 1
+    print(f"\nDoes {any_string} have all unique characters? (yes/no)\n")
     for character in any_string:
         if character in any_string[index:len(any_string)]:
-            unique = False
+            unique = "no"
             return unique
-        index++
-    unique = True
+        index += 1
+    unique = "yes"
     return unique
         
-print(f"Does 'Rudolph' have unique characters? \n{is_unique('Rudolph')})
+print(is_unique("Rudolph"))
+
+print(is_unique("Reindeer"))

@@ -16,6 +16,7 @@ LIFO Last in First Out
 Example of use:
 - Browser history
 - Undo/redo option
+- Think of stacked plates. The top plate is taken first and plates continue to stack on the top. 
 
 ## Queue
 
@@ -29,7 +30,7 @@ FIFO First in First out
 |  peek   | O(1) |
 
 Example of use:
-- line to a roller coaster
+- Think of a line to a roller coaster. The people queue in line but the first one in line goes first
 - anything with a wait list
 - Ride share apps
 - Using printers 

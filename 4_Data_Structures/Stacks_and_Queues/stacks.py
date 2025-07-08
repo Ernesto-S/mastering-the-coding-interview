@@ -12,8 +12,34 @@
 # but keep in mind about the cache locality reference for arrays which 
 # results in better performance than linked lists
 
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
 class Stack:
     def __init__(self):
-        self.stack = []
+        self.top = None
+        self.bottom = None
+        self.length = 0
     
+    def peek(self):
+        if self.top is None:
+            return None
+        return self.top.value()        
+
+    def push(self, value):
+        
+
+
+    def pop(self):
+
+
+    def empty(self):
+
+myStack = Stack()
+myStack.push("Discord")
+myStack.push("Udemy")
+myStack.push("Google")
+
     

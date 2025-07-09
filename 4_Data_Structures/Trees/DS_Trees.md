@@ -27,3 +27,27 @@ I binary search tree is a subset of Binary tree. It's strengths is that is has g
 Rules:
 1.) The value to the right of the node is always increasing
 2.) A node can only have 2 children. 
+
+## Binary Heap
+
+Commonly used when ordering is important. They are structured such that the top node is always greater than any of the child nodes. these are really great at doing comparative iterations. Typically used in priority queues.
+
+    101
+   /   \
+  72    32
+ / \    / \
+2  45  5   1
+
+## Trie
+
+Is a specialized tree most often used in searching. Typically with characters or strings. 
+
+          Start
+   /    /    \       \
+  A     D      N     Z
+ / \    |     / \    |
+r   s   o    e   o   e
+|       |    |   |   |
+e       t    w   t   n
+             |
+             s

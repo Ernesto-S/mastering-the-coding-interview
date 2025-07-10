@@ -14,3 +14,4 @@ The first number is compared through out the list. The lowest number is found an
 Take a list and divide by half and this continues until the items are single items 
 
 ## Quick Sort
+Uses a method of sorting that randomly selects one value as a pivot location and moves the value until its location is found. 

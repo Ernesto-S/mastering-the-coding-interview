@@ -61,9 +61,18 @@ class Sorting():
         result.extend(right[j:])
         return result
 
+    def quick_sort(arr):
+        if len(arr) <= 1:
+            return arr
+        pivot = arr[len(arr) // 2]
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return Sorting.quick_sort(left) + middle + Sorting.quick_sort(right)
+
 
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 print(f"Values unsorted: {numbers} \n\n")
-sorted = Sorting.merge_sort(numbers)
+sorted = Sorting.quick_sort(numbers)
 print(f"Values sorted:   {sorted}\n")

@@ -22,12 +22,21 @@ class Sorting():
 
         sorted = unsorted
         return sorted
-
-
-                
+    
+    def insertion(unsorted):
+        length = len(unsorted)
+        for i in range(1, length):
+            key = unsorted[i]
+            j = i -1
+            while j >= 0 and unsorted[j] > key:
+                unsorted[j + 1] = unsorted[j]
+                j -= 1
+            unsorted[j + 1] = key
+        sorted = unsorted
+        return sorted
 
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 print(f"Values unsorted: {numbers} \n\n")
-sorted = Sorting.selection(numbers)
+sorted = Sorting.insertion(numbers)
 print(f"Values sorted:   {sorted}\n")

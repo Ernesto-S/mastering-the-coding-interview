@@ -1,0 +1,4 @@
+timestamp,sensor,value,status
+2025-7-10 5:43:15,temperature,25.51,pass
+2025-7-10 5:43:15,voltage,4.01,pass
+2025-7-10 5:43:15,current,1.26,pass

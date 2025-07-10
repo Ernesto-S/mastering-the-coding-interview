@@ -8,6 +8,7 @@ Comes from the idea of comparing two values. The largest number is bubbled to th
 
 ## Selection Sort
 
+
 ## Merge Sort
 
 ## Quick Sort

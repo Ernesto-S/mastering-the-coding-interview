@@ -11,5 +11,6 @@ Is useful for time when the list is nearly sorted. Stepping through the list the
 The first number is compared through out the list. The lowest number is found and then positions are swapped. 
 
 ## Merge Sort
+Take a list and divide by half and this continues until the items are single items 
 
 ## Quick Sort

@@ -34,9 +34,36 @@ class Sorting():
             unsorted[j + 1] = key
         sorted = unsorted
         return sorted
+    
+    def merge_sort(arr):
+        if len(arr) <= 1:
+            return arr
+
+        mid = len(arr) // 2
+        left = Sorting.merge_sort(arr[:mid])
+        right = Sorting.merge_sort(arr[mid:])
+
+        return Sorting.merge(left, right)
+
+    def merge(left, right):
+        result = []
+        i = j = 0
+
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                result.append(left[i])
+                i += 1
+            else:
+                result.append(right[j])
+                j += 1
+
+        result.extend(left[i:])
+        result.extend(right[j:])
+        return result
+
 
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 print(f"Values unsorted: {numbers} \n\n")
-sorted = Sorting.insertion(numbers)
+sorted = Sorting.merge_sort(numbers)
 print(f"Values sorted:   {sorted}\n")
